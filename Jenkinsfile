@@ -1,24 +1,23 @@
-Pipeline
+pipeline 
+     {
+      agent any
+      stages
+      {
+       stage('git')
        {
-       agent any
-       stages
+        steps
             {
-            stage("GIT")
-                    {   
-                    steps
-                        {
-                        git clone "https://github.com/SWAROOPADEVENDRA/pipeline.git"
-                        }
-                    }
-            stage("RUN")
-                    {
-                    steps
-                        {
-                         sh "python main.py"
-                         sh "java demo.java"
-                        }
-                    }
-            }
+              git ""
+              }
        }
-
-
+        stage('run')
+        {
+         steps
+            {
+             sh "java demo.java"
+             sh "python3 main.py"
+             }
+        }
+       
+      }
+      }
