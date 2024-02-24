@@ -7,7 +7,7 @@ pipeline
        {
         steps
             {
-              git ""
+              git "https://github.com/SWAROOPADEVENDRA/7.git"
               }
        }
         stage('run')
