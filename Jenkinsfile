@@ -1,4 +1,4 @@
-pipeline 
+Pipeline 
      {
       agent any
       stages
@@ -15,7 +15,7 @@ pipeline
          steps
             {
              sh "java demo.java"
-             sh "Python3 main.py"
+             sh "python3 main.py"
              
             }
         }
