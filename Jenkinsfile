@@ -1,22 +1,20 @@
-Pipeline 
+pipeline 
      {
       agent any
       stages
       {
-       stage('GIT')
+       stage('git')
        {
         steps
             {
               git "https://github.com/SWAROOPADEVENDRA/7.git"
               }
-       }
-        stage('Run')
+}
+        stage('run')
         {
          steps
             {
              sh "java demo.java"
-            
-             
             }
         }
        
